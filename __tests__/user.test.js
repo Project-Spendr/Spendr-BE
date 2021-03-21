@@ -97,7 +97,6 @@ describe('user routes', () => {
   it('delete a user', () => {
     return User.create({
       name: 'Bing Bing Supreme',
-      phone: '4066666666',
       email: 'sosupersourcreamy@sickness.sourcream',
       password: 'wordstuff',
       __v: 0
@@ -108,7 +107,6 @@ describe('user routes', () => {
         expect(res.body).toEqual({
           _id: expect.anything(),
           name: 'Bing Bing Supreme',
-          phone: '4066666666',
           email: 'sosupersourcreamy@sickness.sourcream',
           __v: 0
         });
@@ -118,7 +116,6 @@ describe('user routes', () => {
   it('patches a user', () => {
     return User.create({
       name: 'Bing Bing',
-      phone: '4066666666',
       email: 'sosuperrad@sickness.gov',
       password: 'wordstuff'
     })
@@ -131,7 +128,6 @@ describe('user routes', () => {
         expect(res.body).toEqual({
           _id: expect.anything(),
           name: 'Bing Bing Supreme',
-          phone: '4066666666',
           email: 'sosupersourcreamy@sickness.sourcream',
           __v: 0
         });
